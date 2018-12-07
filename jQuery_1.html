@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+</head>
+<body>
+	
+	<ul>
+		<li id="l1">1</li>
+		<li class="green">2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ul>
+
+	<div class="green">
+		<p>aaaaa</p>
+		<p>aaaaa</p>
+		<div>
+			<p>bbb</p>
+			<p>bbb</p>
+		</div>
+	</div>
+	
+<script>
+	$(function(){
+
+		/*
+			基本选择器
+		 */
+		//jQquery设置样式
+		//css(name,value)
+		
+		//$("#l1").css('backgroundColor', 'red');//id选择器
+
+		//$(".green").css('backgroundColor', 'green');//class选择器
+
+
+		//交集 并集
+		//$("li.green").css('backgroundColor', 'green');
+		//$("#l1,.green").css('backgroundColor', 'pink');
+
+		/*
+			层级选择器
+		 */
+		//$("div.green>p").css('backgroundColor', 'pink');//子代选择器
+		//$("div.green p").css('backgroundColor', 'pink');//后代选择器 
+		
+
+		/*
+			过滤选择器
+		 */
+		$("li:even").css('backgroundColor', 'yellow');
+		$("li:odd").css('backgroundColor', 'pink');
+		$("li:first").css('color', 'red');
+		$("li:last").css('color', 'red');
+		$("li:eq(2)").css('color', 'red');
+		$("li:gt(5)").css('color', 'red');
+		$("li:lt(5)").css('color', 'red');
+
+		/**/
+
+	});
+
+</script>
+</body>
+</html>
